@@ -10,13 +10,13 @@ var media;
 // ! Vincular 
 // ? Diferencias entre inner - document.write
 
-document.getElementById("espacio1").innerHTML = "<h3><b>Ejercicio 1</b></h3>";
+document.getElementById("espacio1").innerHTML = "<h3><b>Ejercicio 1 :</b>Primeros números:</h3>";
 for (let i = 0; i < 10; i++) {
 
     document.write("\n" + i + "<br>");
 }
 
-document.write("<h3><b>Ejercicio 2</b></h3>");
+document.write("<h3><b>Ejercicio 2 :</b>Primeros pares</h3>");
 for (let i = 0; aux2 < 10; i++) {
     if (i % 2 == 0) {
         document.write("\n" + i + "<br>");
@@ -27,7 +27,3 @@ for (let i = 0; aux2 < 10; i++) {
 
 i = 0;
 document.write("<br><h3><b>Ejercicio 3</b></h3>");
-do{
-
-    num = prompt
-}while(1=1);
