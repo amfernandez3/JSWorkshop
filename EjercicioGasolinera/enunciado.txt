@@ -1,0 +1,21 @@
+EJERCICIO
+Acabo de montar una minigasolinera con un único depósito de gasoil de 50000 litros.
+
+Por seguridad de los vehículos, el surƟdor solo permite dar servicio mientras el deposito está
+por encima del 10% de su capacidad total.
+
+Teniendo en cuenta que el precio para hoy del combusƟble es de 1,24€/l, se pide hacer un
+programa que:
+
+1. Permita repostar a los vehículos previo pago del combusƟble.
+A cada uno de los vehículos se le proveerá del combusƟble según el importe abonado.
+Si se diese el caso de que con el importe solicitado el depósito bajase de su capacidad
+
+mínima establecida, el usuario será avisado del importe que realmente se le podrá
+suministrar.
+
+2. Al finalizar el día, me interesa saber:
+ Cuántos vehículos han repostado.
+ Cuántos litros me quedan en el depósito
+ Cuál es el importe medio gastado por cada vehículo
+ Cuánto porcentaje me queda del depósito por encima del mínimo establecido
