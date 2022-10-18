@@ -16,5 +16,4 @@ for (let i = 0; i < numeros.length; i++) {
     }
 
 }
-
 alert("Los números introducidos son: " + numeros+ "Y el mayor es: " + mayor);
