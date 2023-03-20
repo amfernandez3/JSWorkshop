@@ -9,12 +9,28 @@
   </head>
   <body>
     <!--Ejemplo de evento-->
-    <script src="./generarTablero.js"></script>
     <section>
       <article id="pruebas">
-        <div><button onclick="generartablero()">GenerarTablero</button></div>
-        <div id="cuadros"></div>
+        <h3>Formulario pruebas</h3>
+        <form action="" method="POST" id="registro" name="registro">
+          <label for="nombre">Nombre</label>
+          <input type="checkbox" id="verano" name="verano" value="Sí">
+          <input type="text" name="nombre" id="nombre">
+          <input type="submit" name="enviar" id="enviar">
+        </form>
+      </article>
+      <h3>Botón de función:</h3><br>
+      <article>
+        <br>
+        <button id="botonFuncion">Pulsame</button>
+        <button id="botonReset">Reset</button>
+        <button onclick="marcar()">SÍ</button>
+        <button onclick="desmarcar()">NO</button>
+      </article>
+      <h3>Salida</h3>
+      <article id="lienzo">
       </article>
     </section>
+    <script src="functions.js"></script>
   </body>
 </html>

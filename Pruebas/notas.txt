@@ -1,0 +1,4 @@
+Temario relativo al manejo del DOM a través de eventos y el uso del objeto formulario:
+
+Partiendo de que los form son objetos del document (hijo a su vez de window), podemos conseguir una relación de forms
+existentes en la página del siguiente modo: document.forms;
