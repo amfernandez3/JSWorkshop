@@ -1,0 +1,101 @@
+Material de prácticas sobre eventos y DOM relativos al examen de cliente del día 21/03/2023
+
+Tema 4:
+- El DOM (modelo de objetos del documento) permite que código js interactúe con la estructura de la página web.
+- La W3C define el DOM como una API para documentos válidos (HTML) y bien construidos (XML). Define la estructura lógica de 
+un documento y el modo en que se accede y manipula.
+- Definimos objetos como entidad con propiedades que definen su estado sobre las que actúan unos métodos.
+- Se accede a las propiedades : objeto.propiedad y a los métodos: objeto.metodo(parámetros).
+
+Objetos js de alto nivel:
+Window (padre): Contenedor principal de todo el contenido que se muestra en la web. 
+- Screen: Permite obtener información sobre la ventana del navegador.
+- Navigator: Información sobre el navegador que estamos usando.
+- Location: Información referente a la URL actual.
+- History: Información referente a las URL visitadas por el usuario en un navegador
+- Document : Contiene toda la jerarquía de objetos de la página HTML, cada documento cargado en una ventana es un objeto document.
+
+
+window -> genera nueva ventana: window.open(url,nombre,caracteristicas);
+ejemplo: var subVentana=window.open("nueva.html","nueva","height=600,width=800");
+
+-----------------------------------------------------DOCUMENT----------------------------------------------
+
+Document -> proporciona a los scripts acceso a los elementos HTML dentro de la página.
+Este elemento forma parte del objeto window, se puede acceder a el de dos modos: "window.document" o "document".
+
+Document presenta jerarquía sobre los siguientes elementos:
+- Link
+- Anchor
+- Form * 
+- Area
+- Image
+
+Propiedades Document:
+    activeElement: Devuelve el elemento del DOM que tiene el foco.
+    baseURI: Devuelve el valor de la URI. Solo es compatible con Internet Explorer.
+    body: Devuelve el body de un documento.
+    characterSet (también conocido como inputEncoding): Devuelve el conjunto de caracteres en el que está codificado el documento.
+    cookie: Devuelve todos los nombres/valores de las cookies asociadas al documento.
+    doctype: Devuelve la declaración DOCTYPE del documento.
+    documentElement: Devuelve el elemento <html> del documento.
+    documentMode: Devuelve el valor usado por el navegador para renderizar el documento. Solo es compatible con Internet Explorer, y devuelve el valor 5 si no se especifica un DOCTYPE.
+    documentURI: Establece o devuelve el valor de la URI. Compatible con todos los navegadores excepto Internet Explorer.
+    domain: Devuelve el nombre del dominio del servidor que llamó al documento.
+    head: Devuelve el elemento <head> del documento.
+    lastModified: Devuelve la fecha y la hora en la que el documento fue modificado.
+    readyState: Devuelve el estado de carga de un documento:
+    uninitialized: No comenzó la descarga.
+    loading: Se está descargando.
+    loaded: Ha sido descargado.
+    interactive: Descargado lo suficiente para que se puedan interactuar con los elementos del documento, pero todavía se está descargando el resto del contenido.
+    complete: Todo el documento y sus recursos asociados han sido descargados.
+
+Métodos Document:
+    addEventListener(): Añade un gestor de eventos al documento.
+    adoptNode(): Adopta un nodo de otro documento (y todos sus descendientes). El nodo es borrado del documento original.
+    close(): Cierra el flujo abierto previamente con document.open().
+    createAttribute(): Crea un atributo de un nodo.
+    createComment(): Crea un nodo comentario con un texto.
+    createDocumentFragment(): Crea un nodo fragmento de documento vacío. Sirve para extraer, modificar trozos del documento original y/o añadir posteriormente al mismo.
+    createElement(): Crea un nodo elemento.
+    createTextNode(): Crea un nodo de texto.
+    getElementById(id): Devuelve el elemento con dicho id.
+    getElementsByClassName(className): Devuelve los elementos con dicho className.
+    getElementsByName(name): Devuelve los elementos con dicho name.
+    getElementsByTagName(tagName): Devuelve los elementos con dicho tagName.
+    hasFocus(): Indica si el documento tiene el foco.
+    importNode(nodo, descendientes): Importa un nodo de otro documento sin borrarlo del original. Si el parámetro descendientes es true, importa también sus descendientes.
+    normalize(): Borra los nodos texto vacíos y une los adyacentes.
+    open(): Abre un flujo de salida para órdenes write y/o writeln que se visualizan en el documento cuando se cierra con close().
+    querySelector(): Devuelve el primer elemento cuyo selector concuerda con el especificado.
+    querySelectorAll(): Lo mismo que la anterior pero crea un nodo lista con todos los que concuerdan.
+    removeEventListener(): Borra un gestor de eventos añadido previamente con addEventListener().
+    write(expresión): Escribe expresiones HTML y/o código JavaScript en el documento.
+    writeln(expresion): Como write() pero añade al final un salto de línea.
+
+Colecciones Document:
+    anchors: Contiene todas las anclas del documento (zonas etiquetadas con <a name=”…”>).
+    embeds: Contiene todos los elementos embebidos del documento (etiqueta <embed>).
+    forms: Contiene todos los formularios del documento (etiqueta <form …>).
+    images: Contiene todas las imágenes del documento (etiqueta <img …>).
+    links: Contiene todos los enlaces del documento (etiqueta <a href=”…”>).
+    scripts: Contiene todos los script del documento (etiqueta <script>).
+
+
+
+Tema 5:
+
+Eventos y formularios  js
+Form es una propiedad del objeto document (en JavaScript), se corresponde con las etiquetas <form> de HTML.
+Los formularios en principio se envían de dos modos: input type="submit" HTML // submit de JavaScript.
+
+Suponiendo en el HTML un formulario: <form id="formularioPruebas"></form>
+
+Podemos acceder a él de varias maneras desde el JavaScript:
+- usando el getElementoById: var formulario=document.getElementById("formularioPruebas");
+- usando el getElementsByTagName: var formularios = document.getElementsByTagName("formularioPruebas"); //devuelve array de forms
+se puede acceder al primero con: var primerFormulario = formularios[0];
+- Disponemos tambien de la colección "forms" : var formularios = document.forms; //referencia a todos los formularios del documento
+var primerFormulario = formularios[0] ó var primerFormulario = formularios["login"]; //primer formulario del documento
+

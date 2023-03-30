@@ -1,0 +1,4 @@
+Este ejemplo solo funciona con Internet explores pero en versiones 10 y anteriores
+Para probralo hay que abrirlo con el Internet Explorer y si es una versión superior a 10 hay que
+abrir las herramientas de desarrollo y poner el emulador de otra versión en el icono de la derecha
+donde aparece la imagen de un monitor y un móvil con una flecha y un nº (más o menos encima del recuadro de buscar)
